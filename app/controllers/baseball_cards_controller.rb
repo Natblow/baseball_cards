@@ -65,6 +65,6 @@ class BaseballCardsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def baseball_card_params
-      params.require(:baseball_card).permit(:name, :team, :position)
+      params.require(:baseball_card).permit(:name, :team, :position, :image_url)
     end
 end
