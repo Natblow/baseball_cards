@@ -1,0 +1,2 @@
+class BaseballCard < ApplicationRecord
+end
