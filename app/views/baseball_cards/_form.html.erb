@@ -17,16 +17,25 @@
   </div>
 
   <div>
+    <%= button_tag 'Another Player Image', type: '', id: :update_card_player_image %>
+  </div>
+
+  <div>
     <%= form.label :team, style: "display: block" %>
-    <%= form.text_field :team %>
+    <%= form.select :team, team_options_for_select(@baseball_card&.team) %>
   </div>
 
   <div>
     <%= form.label :position, style: "display: block" %>
-    <%= form.text_field :position %>
+    <%= form.select :position, BaseballCard::POSITIONS %>
   </div>
-
+  
   <div>
+    <%= form.hidden_field :image_url %>
     <%= form.submit %>
   </div>
 <% end %>
+
+<br />
+
+<%= render @baseball_card %>
